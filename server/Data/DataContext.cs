@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using server.Models;
 
 namespace server.Data
 {
@@ -8,6 +9,7 @@ namespace server.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder) { }
 
