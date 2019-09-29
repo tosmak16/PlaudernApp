@@ -32,6 +32,14 @@ namespace server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options => options.AddPolicy("CorsPolicy", builder =>
+            {
+                builder
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials()
+                    .WithOrigins("http://localhost:8080");
+            }));
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("plaudernDB")));
             services.AddScoped<IRepository, Repository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
@@ -50,6 +58,8 @@ namespace server
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
+
 
             app.UseAuthorization();
 

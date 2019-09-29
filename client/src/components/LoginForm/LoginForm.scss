@@ -1,0 +1,41 @@
+.form {
+    width: 30rem;
+}
+
+.error-label {
+    display: flex;
+    color: red;
+    font-size: 0.7rem;
+}
+
+form {
+    width: 300px;
+    overflow-y: scroll;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    width: 100%;
+
+    >div {
+        margin: 0;
+    }
+}
+
+.control-label {
+    justify-self: start;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+
+    & div {
+        margin: 0;
+        margin-bottom: 0 !important;
+    }
+}

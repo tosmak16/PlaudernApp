@@ -91,11 +91,14 @@ namespace server.Controllers
             }
 
             var token = this.GenerateToken(loggedInUser);
+            var userToReturn = _mapper.Map<UserDetailDto>(loggedInUser);
+
 
 
             return Ok(new
             {
-                token = token
+                token = token,
+                user = userToReturn
             });
 
         }
