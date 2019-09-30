@@ -2,7 +2,7 @@ using AutoMapper;
 using server.Dtos;
 using server.Models;
 
-namespace ChatApp.Helpers
+namespace server.Helpers
 {
     public class AutoMapperProfile : Profile
     {
@@ -10,7 +10,10 @@ namespace ChatApp.Helpers
         {
             CreateMap<UserForRegDto, User>();
             CreateMap<User, UserDetailDto>();
-            CreateMap<User, UserListDto>();
+            CreateMap<User, UserListDto>().ForMember(dest => dest.Age, opt =>
+            {
+                opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
+            });
 
 
         }
