@@ -10,6 +10,8 @@ namespace ChatApp.Helpers
         {
             CreateMap<UserForRegDto, User>();
             CreateMap<User, UserDetailDto>();
+            CreateMap<User, UserListDto>();
+
 
         }
     }

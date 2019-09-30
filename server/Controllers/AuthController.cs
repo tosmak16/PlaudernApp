@@ -32,8 +32,8 @@ namespace server.Controllers
         public string GenerateToken(User user)
         {
             var claims = new[] {
+                        new Claim(ClaimTypes.Name, user.Id.ToString()),
                         new Claim(ClaimTypes.NameIdentifier, user.Username),
-                        new Claim(ClaimTypes.Name, user.Username)
                     };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:SecretKey").Value));
 

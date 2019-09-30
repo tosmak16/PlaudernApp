@@ -45,10 +45,16 @@ namespace server
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("plaudernDB")));
             services.AddScoped<IRepository, Repository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
 
             services.AddAutoMapper();
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            services.AddAuthentication(options =>
+                    {
+                        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                    })
                     .AddJwtBearer(options =>
                     {
                         options.TokenValidationParameters = new TokenValidationParameters
@@ -75,9 +81,8 @@ namespace server
             app.UseRouting();
             app.UseCors("CorsPolicy");
 
-
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

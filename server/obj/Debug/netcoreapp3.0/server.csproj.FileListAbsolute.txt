@@ -42,3 +42,6 @@
 /Users/andela/Documents/apps/plaudernApp/server/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Tokens.dll
 /Users/andela/Documents/apps/plaudernApp/server/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
 /Users/andela/Documents/apps/plaudernApp/server/bin/Debug/netcoreapp3.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/andela/Documents/apps/plaudernApp/server/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/andela/Documents/apps/plaudernApp/server/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll
+/Users/andela/Documents/apps/plaudernApp/server/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
