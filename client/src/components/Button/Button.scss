@@ -1,0 +1,127 @@
+@import "../../styles/variables";
+
+.button {
+    width: 100%;
+    font-family: $body-font;
+    font-weight: bold;
+    height: 2.1rem;
+    font-weight: bold;
+    background: $primary-color;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0.42rem 0.83rem 0 rgba(0, 0, 0, 0.12);
+    font-size: 0.58rem;
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &:active {
+        box-shadow: 0 9px 0.58rem 0 rgba(0, 0, 0, 0.12);
+    }
+}
+
+.button--disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.button--danger,
+.button--warning,
+.button--standard,
+.button--white,
+.button--plain {
+    width: 100%;
+    font-family: $body-font;
+    font-weight: bold;
+    height: 2.1rem;
+    font-weight: bold;
+    background: $primary-color;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    box-shadow: 0 0.42rem 0.83rem 0 rgba(0, 0, 0, 0.12);
+    font-size: 0.58rem;
+    letter-spacing: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &:active {
+        box-shadow: 0 9px 0.58rem 0 rgba(0, 0, 0, 0.12);
+    }
+}
+
+.button--standard {
+    color: $white;
+    background: $primary-color;
+}
+
+.button--warning {
+    background: rgb(204, 201, 38); // replace with actual color
+    color: $white;
+}
+
+.button--danger {
+    background: $fast-car-red;
+    color: $white;
+}
+
+.button--plain {
+    color: $primary-color;
+    background: $white;
+    box-shadow: none;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 1s;
+}
+
+.ripple:hover {
+    background: $second-color radial-gradient(circle, transparent 1%, $second-color 1%) center/15000%;
+}
+
+.ripple:active {
+    background-color: $primary-color;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+.button--white {
+    background: white;
+    color: $primary-color;
+}
+
+.bordered {
+    border-radius: 4px;
+}
+
+.inverted {
+    background: none;
+    color: $primary-color;
+    box-shadow: none;
+
+    &:hover {
+        box-shadow: 0 5px 0.83rem 0 rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $primary-color;
+        color: $white;
+    }
+}
