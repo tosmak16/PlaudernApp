@@ -1,5 +1,23 @@
+@import "../../styles/variables";
+
+
 .login-container {
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     height: 100%;
+}
+
+.side-content {
+    background-color: rgb(228, 184, 184);
+    height: 100vh;
+
+    @media (max-width: $mobile-width) {
+        display: none;
+    }
+}
+
+.login-form-wrapper {
+    display: grid;
+    align-items: start;
+    padding: 10rem 1rem;
 }
