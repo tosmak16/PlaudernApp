@@ -1,9 +1,20 @@
-$body-font: "Avenir",
-Helvetica,
+$body-font: "Source Sans Pro",
+"Helvetica Neue",
 Arial,
 sans-serif;
-;
 
+$half-mobile-width: 420px;
+$mobile-width: 840px;
+$tablet-width: 1025px;
+$desktop-width: 1192px;
+$laptop-width: 1024px;
+
+
+$primary-color: rgb(65, 184, 131);
+$second-color: rgb(53, 73, 94);
+$meeky-black: rgb(29, 49, 85);
+$white: rgb(255, 255, 255);
+$fast-car-red: red;
 
 $min_width: 320px;
 $max_width: 1200px;
@@ -35,3 +46,6 @@ $max_font: 24px;
         }
     }
 }
+
+
+.header-small {}

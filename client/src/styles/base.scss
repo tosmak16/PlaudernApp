@@ -41,3 +41,40 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.error-text {
+    color: $fast-car-red;
+    font-size: .6rem;
+}
+
+input[type=text] {
+    height: 2.1rem;
+    width: 100%;
+    font-size: 0.92rem;
+    font-family: inherit;
+    border: none;
+    transition: all .5s;
+    border-bottom: 1px solid rgba(29, 49, 85, 0.2);
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &:focus {
+        outline: none;
+        border-bottom: 3px solid $primary-color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $primary-color;
+        opacity: 0.6;
+    }
+
+    &:placeholder-shown+.input-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-1.67rem);
+    }
+
+    &.error {
+        border-bottom: 3px solid red;
+    }
+}
