@@ -1,0 +1,84 @@
+@import "../../styles/variables";
+
+.error-label {
+    display: flex;
+    color: red;
+    font-size: 0.7rem;
+}
+
+.sign-up-form {
+    display: grid;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    width: 100%;
+    margin-top: 1rem;
+    row-gap: .5rem;
+
+    >input {
+        font-size: .75rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+
+.control-label {
+    justify-self: start;
+}
+
+.radio-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    align-content: center;
+    column-gap: 1rem;
+    margin: .5rem 0;
+
+    & div {
+        margin: 0;
+        margin-bottom: 0 !important;
+    }
+}
+
+.radio-wrapper {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    font-size: 0.92rem;
+    align-items: center;
+    column-gap: .5rem;
+
+
+
+    &>input {
+        cursor: pointer;
+    }
+
+
+}
+
+.button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    column-gap: .5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+.vdpComponent.vdpWithInput {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 2.1rem;
+}
