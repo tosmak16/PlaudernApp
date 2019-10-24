@@ -1,11 +1,6 @@
 <template>
   <div>
-    <v-app>
-      <v-app-bar>
-        <div>hello</div>
-      </v-app-bar>
-      <router-view />
-    </v-app>
+    <router-view />
   </div>
 </template>
 
