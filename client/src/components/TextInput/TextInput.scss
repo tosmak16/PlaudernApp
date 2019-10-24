@@ -1,0 +1,149 @@
+@import "../../styles/variables";
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-base {
+    height: 2.1rem;
+    width: 100%;
+    font-size: 0.92rem;
+    font-family: inherit;
+    border: none;
+    transition: all .5s;
+    border-bottom: 1px solid rgba(29, 49, 85, 0.2);
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &:focus {
+        outline: none;
+        border-bottom: 3px solid $primary-color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $primary-color;
+        opacity: 0.6;
+    }
+
+    &:placeholder-shown+.input-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-1.67rem);
+    }
+
+    &.error {
+        border-bottom: 3px solid red;
+    }
+}
+
+.input-email,
+.input-password,
+.input-number,
+.input-image,
+.input-text,
+.input-file,
+.input-date,
+.input-url,
+.input-tel {
+    height: 2.1rem;
+    width: 100%;
+    font-size: 0.92rem;
+    font-family: inherit;
+    border: none;
+    transition: all .5s;
+    border-bottom: 1px solid rgba(29, 49, 85, 0.2);
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &:focus {
+        outline: none;
+        border-bottom: 3px solid $primary-color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $primary-color;
+        opacity: 0.6;
+    }
+
+    &:placeholder-shown+.input-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-1.67rem);
+    }
+
+    &.error {
+        border-bottom: 3px solid red;
+    }
+
+    text-transform: none;
+}
+
+.input-label {
+    display: block;
+    font-size: .5rem;
+    transform: translateY(-2.5rem);
+    color: $primary-color;
+    opacity: 0.6;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: .58rem;
+    text-transform: capitalize;
+    transition: all .5s;
+}
+
+.checkmark-label {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: .83rem;
+    width: .5rem;
+    border: solid $second-color;
+    ;
+    border-width: 0 2px 2px 0;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+
+.dark {
+    color: black;
+    border-color: black;
+
+    &::placeholder {
+        color: black;
+    }
+
+    label {
+        color: black;
+    }
+}
+
+.error-message {
+    color: red;
+    height: .58rem;
+    font-family: $body-font;
+    margin-top: 5px;
+    font-size: .5rem;
+    line-height: .58rem;
+}
+
+.password-visibility-indicator {
+    display: inline-block;
+    position: absolute;
+    top: 0.63rem;
+    right: 0;
+    line-height: .79rem;
+    color: $primary-color;
+    font-family: $body-font;
+    font-size: 0.67rem;
+    border: none;
+    background-color: transparent;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
