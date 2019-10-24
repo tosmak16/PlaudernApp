@@ -8,6 +8,7 @@
 
 .sign-up-form {
     display: grid;
+    color: $meeky-black;
 }
 
 .form-group {
@@ -30,6 +31,8 @@
 
 .control-label {
     justify-self: start;
+    font-size: .75rem;
+    font-weight: bold;
 }
 
 .radio-group {
@@ -52,10 +55,10 @@
     font-size: 0.92rem;
     align-items: center;
     column-gap: .5rem;
+    cursor: pointer;
 
-
-
-    &>input {
+    &>input,
+    label {
         cursor: pointer;
     }
 
@@ -64,21 +67,20 @@
 
 .button-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    grid-template-columns: 1fr 1fr;
     column-gap: .5rem;
-    width: 100%;
     margin-top: 1rem;
 }
-
-
-
-
-
-
 
 
 .vdpComponent.vdpWithInput {
     display: grid;
     grid-template-rows: 1fr;
     height: 2.1rem;
+}
+
+
+.main-header {
+    margin-bottom: 2rem;
+
 }

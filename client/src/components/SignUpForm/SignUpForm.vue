@@ -1,8 +1,6 @@
 <template>
   <div class="sign-up-form">
-    <h2 class="text-center text-primary">Create an account</h2>
-    <hr />
-
+    <h5 class="main-header">Create an account</h5>
     <div v-if="step === 1" class="form-group">
       <label class="control-label">Gender</label>
       <div class="radio-group">
