@@ -1,0 +1,160 @@
+@import "../../styles/variables";
+
+.card {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    height: 12.5rem;
+    border-radius: 0.67rem;
+    overflow: hidden;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: transparent;
+
+
+    .card-image {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: #000;
+        transition: .5s;
+
+        &>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &:hover img {
+        opacity: 0.4;
+        transition: .5s;
+    }
+}
+
+.card:hover .card-image {
+    transform: scale(1.2);
+    transition: all .9s;
+}
+
+/**** Social Icons *****/
+
+.social-icons {
+    z-index: 3;
+    display: flex;
+
+    li {
+        list-style: none;
+
+        i {
+            position: relative;
+            display: block;
+            height: 0.83rem;
+            line-height: 0.83rem;
+            text-align: center;
+            font-size: 0.96rem;
+            color: $primary-color;
+            font-weight: bold;
+            margin: 0 6px;
+            transition: .4s;
+            transform: translateY(8.3rem);
+            opacity: 0;
+            padding: 0;
+        }
+    }
+}
+
+.card:hover .social-icons li i {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.social-icons li i:hover {
+    background: #000;
+    transition: .2s;
+
+    .fas {
+        color: #fff;
+    }
+}
+
+.social-icons li .fas {
+    transition: .8s;
+
+    &:hover {
+        transform: rotateY(360deg);
+        color: #fff;
+    }
+}
+
+.card:hover li:nth-child(1) i {
+    transition-delay: 0.1s;
+}
+
+.card:hover li:nth-child(2) i {
+    transition-delay: 0.2s;
+}
+
+.card:hover li:nth-child(3) i {
+    transition-delay: 0.3s;
+}
+
+/**** Personal Details ****/
+
+.details {
+    background: #fff;
+    width: 100vw;
+    height: 100%;
+    z-index: 3;
+    padding: 0.4rem 0;
+    transition: .5s;
+    opacity: 0;
+    transform: translateY(1000px);
+
+
+
+    h2 {
+        text-align: center;
+        font-size: .75rem;
+
+
+        .job-title {
+            font-size: .8rem;
+            line-height: 2.5rem;
+            color: #333;
+            font-weight: 300;
+        }
+    }
+}
+
+.card:hover .details {
+    transform: translateY(4.2rem);
+    opacity: 1;
+}
+
+.card:hover .profile-name {
+    opacity: 0;
+}
+
+.profile-name {
+    position: absolute;
+    bottom: 0.4rem;
+    font-size: 0.75rem;
+    z-index: 5;
+    color: $primary-color;
+    transition: .2s;
+    width: 100%;
+    text-align: center;
+}
+
+h2,
+h3 {
+    text-transform: capitalize;
+}
