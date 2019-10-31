@@ -17,13 +17,15 @@ export default new Router({
       path: "/register",
       name: "register",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/SignUp/SignUpPage.vue")
+        import(
+          /* webpackChunkName: "register" */ "./views/SignUp/SignUpPage.vue"
+        )
     },
     {
       path: "/login",
       name: "login",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Login/LoginPage.vue")
+        import(/* webpackChunkName: "login" */ "./views/Login/LoginPage.vue")
     }
   ]
 });
