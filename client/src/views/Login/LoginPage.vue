@@ -39,12 +39,12 @@ export default class LoginPage extends Vue {
       this.$router.push("/");
     }
   }
-  beforeRouteEnter(to: string, from: string, next: (path?: string) => void) {
+
+  mounted() {
     const token = localStorage.getItem("token");
     if (token) {
-      next("/");
+      this.$router.push("/");
     }
-    next();
   }
 }
 </script>
