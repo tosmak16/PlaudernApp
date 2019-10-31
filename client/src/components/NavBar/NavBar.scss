@@ -1,0 +1,105 @@
+@import "../../styles/variables";
+
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    background-color: $primary-color;
+    color: white;
+    font-size: .8rem;
+
+
+
+    &-list {
+        display: grid;
+        justify-content: end;
+        grid-template-columns: repeat(auto-fit, minmax(1rem, min-content));
+        column-gap: 2rem;
+        width: 100%;
+    }
+
+    &-has-children {
+        position: relative;
+        justify-self: flex-end;
+
+        &>ul {
+            display: grid;
+            row-gap: .5rem;
+            position: absolute;
+            left: 0px;
+            top: 1.6rem;
+            z-index: 4;
+            background-color: $primary-color;
+            padding: .5rem;
+            font-size: .5rem;
+            border-top: none;
+            opacity: 0;
+            transition: .5s;
+        }
+
+        &:hover ul {
+            opacity: 1;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-bar-link {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1rem;
+        background-color: white;
+        height: 2px;
+        width: 0px;
+        transition: .5s;
+    }
+
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.nav-bar-item {
+    list-style: none;
+    cursor: pointer;
+
+    &--active {
+        opacity: 0.6;
+
+        &>a {
+            color: $meeky-black;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 1rem;
+                background-color: white;
+                height: 2px;
+                width: 0px;
+                transition: .5s;
+            }
+
+            &:hover::after {
+                width: 0px;
+            }
+        }
+    }
+
+}
