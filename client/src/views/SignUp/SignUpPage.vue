@@ -32,10 +32,6 @@ Component.registerHooks(["beforeRouteEnter"]);
 })
 export default class SignUpPage extends Vue {
   value: string = "";
-
-  click() {
-    console.log(this.value);
-  }
   @Action("register") register!: (formData: UserForRegister) => void;
   @Action("clearServerError") clearServerError!: () => void;
   @Getter("signUpErrorMessage") signUpErrorMessage!: string;
@@ -55,5 +51,3 @@ export default class SignUpPage extends Vue {
   }
 }
 </script>
-
-
