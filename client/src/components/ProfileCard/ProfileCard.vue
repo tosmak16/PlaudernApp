@@ -4,7 +4,7 @@
       <img :src="photoUrl" alt="profile one" />
     </div>
     <h3 class="profile-name">
-      <i v-if="gender === 'Male'" class="fas fa-male"></i>
+      <i v-if="gender === 'male'" class="fas fa-male"></i>
       <i v-else class="fas fa-female"></i>
       {{ username }}
     </h3>
