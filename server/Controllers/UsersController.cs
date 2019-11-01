@@ -18,10 +18,13 @@ namespace server.Controllers
     {
         private readonly IUserRepository _userService;
         private readonly IMapper _mapper;
-        public UsersController(IUserRepository userService, IMapper mapper)
+        private readonly IRepository _repo;
+
+        public UsersController(IUserRepository userService, IMapper mapper, IRepository repo)
         {
             _mapper = mapper;
             _userService = userService;
+            _repo = repo;
         }
 
         [HttpGet]
@@ -44,6 +47,15 @@ namespace server.Controllers
                     currentPage = paginatedUsers.PageIndex
                 }
             });
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetUser(int id)
+        {
+            var user = await _userService.GetUser(id);
+            var userDetails = _mapper.Map<UserDetailDto>(user);
+
+            return Ok(userDetails);
         }
     }
 
