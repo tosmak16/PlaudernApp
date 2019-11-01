@@ -36,7 +36,7 @@ namespace server.Services
 
         }
 
-        public async Task<T> FindById<T>(long id) where T : class
+        public async Task<T> FindById<T>(int id) where T : class
         {
             return await _dbContext.Set<T>().FindAsync(id);
 
